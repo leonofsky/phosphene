@@ -26,3 +26,7 @@ Each visit increments the serial after the title, starting at `0001`.
 npm install
 npm run dev
 ```
+
+## License
+
+MIT © 2026 Leon Ofsky
