@@ -46,7 +46,6 @@ create table if not exists "account" (
   "refreshToken" text,
   "idToken" text,
   "accessTokenExpiresAt" timestamptz,
-  "accessTokenExpiresAt" timestamptz,
   "refreshTokenExpiresAt" timestamptz,
   "scope" text,
   "password" text,
