@@ -1,7 +1,8 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 
+const segments = ["1", "2-1", "2-2", "2-3", "2-4", "2-5", "2-6", "3", "4", "5"];
 const parts = await Promise.all(
-  [1, 2, 3, 4, 5].map((part) =>
+  segments.map((part) =>
     readFile(new URL(`../assets/og-image-${part}.base64`, import.meta.url), "utf8"),
   ),
 );
