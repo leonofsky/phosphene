@@ -5,12 +5,12 @@ export const recordVisit = createServerFn({ method: "POST" }).handler(
     const { getSql } = await import("@/lib/db");
     const sql = await getSql();
     const rows = await sql<{ count: number }>`
-      insert into visits (id, count) values (1, 1)
+      insert into visits (id, count) values (1, 190)
       on conflict (id) do update set count = visits.count + 1
       returning count
     `;
-    const n = Number(rows[0]?.count ?? 1);
-    return Number.isFinite(n) && n > 0 ? n : 1;
+    const n = Number(rows[0]?.count ?? 190);
+    return Number.isFinite(n) && n > 0 ? n : 190;
   },
 );
 
