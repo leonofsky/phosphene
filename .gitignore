@@ -8,10 +8,10 @@ build
 coverage
 .DS_Store
 *.log
+/public/og.jpg
 .env
 .env.*
 !.env.example
-.grok
 screenshots
 artifacts
 attachments

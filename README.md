@@ -18,7 +18,11 @@ Three.js, Tweakpane, TanStack Start, Geist Mono.
 | Export PNG24 | 4K still |
 | Export H264 | 4K / 15s motion |
 
-Each visit increments the serial after the title, starting at `0001`.
+Each visit increments the serial after the title. The migrated counter preserves the existing total of `0190`; the next visit displays `0191`.
+
+## Deploy
+
+The Vercel project uses the Nitro Vercel preset. Set `DATABASE_URL` to a persistent Postgres connection string in all Vercel environments. The build applies `migrations/0002_visits.sql`, which seeds a new counter at 190 without resetting an existing row.
 
 ## Run
 

@@ -3,5 +3,5 @@ create table if not exists visits (
   count bigint not null default 0
 );
 
-insert into visits (id, count) values (1, 0)
+insert into visits (id, count) values (1, 190)
 on conflict (id) do nothing;
